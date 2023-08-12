@@ -44,6 +44,7 @@ module.exports = async function (context, myTimer) {
     };
 
     context.bindings.outputTable = newEntity;
+    context.log(`gasPrice: ${gasPriceInDecimal}`);
     context.log("Gas price fetched and added to Table Storage.");
   } catch (error) {
     context.log(`Error fetching gas price: ${error.message}`);

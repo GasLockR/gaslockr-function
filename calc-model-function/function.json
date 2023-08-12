@@ -1,0 +1,25 @@
+{
+  "bindings": [
+    {
+      "name": "myTimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "0 0 1 * * *"
+    },
+    {
+      "name": "inputTable",
+      "type": "table",
+      "direction": "in",
+      "tableName": "ETHGasPriceDailyAverage",
+      "connection": "AzureWebJobsStorage",
+      "partitionKey": "ETH"
+    },
+    {
+      "name": "outputTable",
+      "type": "table",
+      "direction": "out",
+      "tableName": "PriceModel7Days",
+      "connection": "AzureWebJobsStorage"
+    }
+  ]
+}
