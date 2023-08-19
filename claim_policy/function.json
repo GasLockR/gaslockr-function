@@ -1,0 +1,25 @@
+{
+  "bindings": [
+    {
+      "name": "myTimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "*/30 * * * * *"
+    },
+    {
+      "name": "inputTable",
+      "type": "table",
+      "direction": "in",
+      "tableName": "ChainlinkFastGasPrice",
+      "connection": "AzureWebJobsStorage",
+      "partitionKey": "GasPriceData"
+    },
+    {
+      "name": "outputTable",
+      "type": "table",
+      "direction": "out",
+      "tableName": "ChainlinkFastGasPrice",
+      "connection": "AzureWebJobsStorage"
+    }
+  ]
+}

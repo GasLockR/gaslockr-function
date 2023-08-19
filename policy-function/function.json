@@ -1,0 +1,18 @@
+{
+  "bindings": [
+    {
+      "name": "myTimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "0 30 23 * * *"
+    },
+    {
+      "name": "inputTable",
+      "type": "table",
+      "direction": "in",
+      "tableName": "PriceModel7Days",
+      "connection": "AzureWebJobsStorage",
+      "partitionKey": "ETH"
+    }
+  ]
+}
